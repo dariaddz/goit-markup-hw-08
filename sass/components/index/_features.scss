@@ -1,0 +1,31 @@
+.features {
+  display: flex;
+}
+
+.features__title {
+  margin-bottom: 10px;
+  color: $title-color;
+
+  font-weight: 700;
+  line-height: 1.14;
+  text-transform: uppercase;
+}
+
+.features__item {
+  width: 270px;
+  align-items: baseline;
+
+  &:not(:last-child) {
+    margin-right: 30px;
+  }
+}
+
+.features__box {
+  @include flexcenter;
+  justify-content: center;
+
+  margin-bottom: 30px;
+  padding: 25px 0;
+  background-color: $background-color-light;
+  border-radius: 4px;
+}

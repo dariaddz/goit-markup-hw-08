@@ -1,0 +1,18 @@
+.logo {
+  margin-right: 93px;
+  color: $accent-color;
+  text-decoration: none;
+
+  font-family: Raleway, sans-serif;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 1.2;
+}
+
+.logo span {
+  color: $title-color;
+}
+
+.logo--light span {
+  color: $secondary-color;
+}

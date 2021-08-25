@@ -1,0 +1,37 @@
+.socmedia {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+.socmedia__item:not(:last-child) {
+  margin-right: 10px;
+}
+
+.socmedia__link {
+  @include flexcenter;
+  justify-content: center;
+
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+
+  fill: $icon-color;
+
+  transition: fill $trans-duration $timing-func, background-color $trans-duration $timing-func;
+
+  &:hover,
+  &:focus {
+    fill: $secondary-color;
+    background-color: $accent-color;
+  }
+
+  &--dark {
+    background-color: rgba(255, 255, 255, 0.1);
+    fill: $secondary-color;
+  }
+}
+.socmedia--footer {
+  margin-top: 20px;
+  margin-left: 0;
+  margin-right: 0;
+}
