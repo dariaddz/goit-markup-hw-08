@@ -1,6 +1,5 @@
 .features {
-  // display: flex;
-  text-align: center;
+  display: flex;
 }
 
 .features__title {
@@ -13,21 +12,17 @@
 }
 
 .features__item {
-  max-width: 450px;
-  margin-bottom: 30px;
-  &:last-child {
-    margin-bottom: 0;
-  }
-  // align-items: baseline;
+  width: 270px;
+  align-items: baseline;
 
-  // &:not(:last-child) {
-  //   margin-right: 30px;
-  // }
+  &:not(:last-child) {
+    margin-right: 30px;
+  }
 }
 
 .features__box {
-  // @include flexcenter;
-  // justify-content: center;
+  @include flexcenter;
+  justify-content: center;
 
   margin-bottom: 30px;
   padding: 25px 0;

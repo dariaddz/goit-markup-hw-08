@@ -1,12 +1,10 @@
 .team {
-  // display: flex;
-  // justify-content: space-between;
-  margin-top: 30px;
-  // margin-top: 50px; for desktop
+  display: flex;
+  justify-content: space-between;
+  margin-top: 50px;
 }
 
 .team__item {
-  margin-top: 30px;
   background-color: $secondary-color;
   border-radius: 0px 0px 4px 4px;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
@@ -15,8 +13,7 @@
 
 .team__wrapper {
   padding-top: 30px;
-  padding-bottom: 24px;
-  // padding-bottom: 30px;for desktop
+  padding-bottom: 30px;
 }
 .team__name {
   color: $title-color;
