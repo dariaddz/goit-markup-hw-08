@@ -10,21 +10,17 @@
   //   background-color: $secondary-color;
 }
 
-.top-line {
-  background-color: pink;
-}
+// .top-line {
+// }
 
 .contacts-socmedia {
   margin-top: auto;
 }
 .menu__socmedia {
   display: flex;
-
-  background-color: yellow;
 }
 
 .header-contacts {
-  //   background-color: green;
   margin-bottom: 32px;
 }
 
@@ -63,10 +59,13 @@
   letter-spacing: 0.02em;
   transition: color $trans-duration $timing-func;
 
-  &:hover .header-contacts__icon,
-  &:focus .header-contacts__icon {
-    fill: $accent-color;
+  &--email {
+    color: $accent-color;
+    font-size: 34px;
   }
+  // &:hover .header-contacts__icon,
+  // &:focus .header-contacts__icon {
+  //   fill: $accent-color;
 
   &:hover,
   &:focus {
