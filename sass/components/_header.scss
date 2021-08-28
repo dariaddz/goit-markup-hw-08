@@ -1,6 +1,6 @@
-.menu {
-  display: none;
-}
+// .menu {
+//   display: none;
+// }
 
 .header {
   display: flex;
@@ -9,94 +9,94 @@
   height: 60px;
 }
 
-.top-line {
-  @include flexcenter;
-}
+// .top-line {
+//   @include flexcenter;
+// }
 
-.navigation,
-.header-contacts {
-  display: flex;
-}
+// .navigation,
+// .header-contacts {
+//   display: flex;
+// }
 
-/* Ссылки */
+// /* Ссылки */
 
-.navigation__item:not(:last-child) {
-  margin-right: 50px;
-}
+// .navigation__item:not(:last-child) {
+//   margin-right: 50px;
+// }
 
-.navigation__link {
-  display: block;
-  position: relative;
+// .navigation__link {
+//   display: block;
+//   position: relative;
 
-  padding-top: 32px;
-  padding-bottom: 32px;
-  bottom: -1px;
-  color: $title-color;
-  text-decoration: none;
+//   padding-top: 32px;
+//   padding-bottom: 32px;
+//   bottom: -1px;
+//   color: $title-color;
+//   text-decoration: none;
 
-  font-weight: 500;
-  line-height: 1.14;
-  letter-spacing: 0.02em;
+//   font-weight: 500;
+//   line-height: 1.14;
+//   letter-spacing: 0.02em;
 
-  transition: color $trans-duration $timing-func;
+//   transition: color $trans-duration $timing-func;
 
-  &:hover,
-  &:focus {
-    color: $accent-color;
-  }
-  &--current {
-    color: $accent-color;
-  }
+//   &:hover,
+//   &:focus {
+//     color: $accent-color;
+//   }
+//   &--current {
+//     color: $accent-color;
+//   }
 
-  &--current::after {
-    color: $accent-color;
-    content: '';
-    display: block;
+//   &--current::after {
+//     color: $accent-color;
+//     content: '';
+//     display: block;
 
-    position: absolute;
-    bottom: 0;
-    left: 0;
+//     position: absolute;
+//     bottom: 0;
+//     left: 0;
 
-    background-color: $accent-color;
+//     background-color: $accent-color;
 
-    width: 100%;
-    height: 4px;
-    border-radius: 2px;
-  }
-}
-/* Контакты в хедере */
+//     width: 100%;
+//     height: 4px;
+//     border-radius: 2px;
+//   }
+// }
+// /* Контакты в хедере */
 
-.header-contacts {
-  margin-left: auto;
-}
-.header-contacts__item + .header-contacts__item {
-  margin-left: 50px;
-}
+// .header-contacts {
+//   margin-left: auto;
+// }
+// .header-contacts__item + .header-contacts__item {
+//   margin-left: 50px;
+// }
 
-.header-contacts__icon {
-  margin-right: 10px;
-  fill: $primary-color;
+// .header-contacts__icon {
+//   margin-right: 10px;
+//   fill: $primary-color;
 
-  transition: fill $trans-duration $timing-func;
-}
+//   transition: fill $trans-duration $timing-func;
+// }
 
-.header-contacts__link {
-  @include flexcenter;
+// .header-contacts__link {
+//   @include flexcenter;
 
-  color: $primary-color;
+//   color: $primary-color;
 
-  font-weight: 500;
-  line-height: 1.14;
-  letter-spacing: 0.02em;
-  transition: color $trans-duration $timing-func;
+//   font-weight: 500;
+//   line-height: 1.14;
+//   letter-spacing: 0.02em;
+//   transition: color $trans-duration $timing-func;
 
-  &:hover .header-contacts__icon,
-  &:focus .header-contacts__icon {
-    fill: $accent-color;
-  }
+//   &:hover .header-contacts__icon,
+//   &:focus .header-contacts__icon {
+//     fill: $accent-color;
+//   }
 
-  &:hover,
-  &:focus {
-    color: $accent-color;
-  }
-}
+//   &:hover,
+//   &:focus {
+//     color: $accent-color;
+//   }
+// }

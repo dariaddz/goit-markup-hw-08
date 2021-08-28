@@ -1,0 +1,32 @@
+.menu {
+  width: 100%;
+  height: 100%;
+  background-color: $secondary-color;
+}
+
+.menu__socmedia {
+  display: flex;
+}
+
+.navigation__link {
+  display: block;
+  margin-bottom: 32px;
+
+  color: $title-color;
+  text-decoration: none;
+
+  font-size: 40px;
+  font-weight: 500;
+  line-height: 1.17;
+  letter-spacing: 0.02em;
+
+  transition: color $trans-duration $timing-func;
+
+  &:hover,
+  &:focus {
+    color: $accent-color;
+  }
+  &--current {
+    color: $accent-color;
+  }
+}
