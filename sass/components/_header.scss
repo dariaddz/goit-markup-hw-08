@@ -22,11 +22,11 @@
   width: 100vw;
   height: 100vh;
 
-  padding: 21px 40px 48px 40px;
-  background-color: lightblue;
+  padding: 48px 40px;
+  background-color: $secondary-color;
 
   transform: translateX(100%);
-  //   background-color: $secondary-color;
+  transition: transform $trans-duration $timing-func;
 }
 
 .menu-container.is-open {
@@ -131,7 +131,11 @@
 // .top-line {
 //   @include flexcenter;
 // }
-
+.navigation__item,
+.header-contacts__item,
+.menu__item {
+  text-align: left;
+}
 // .navigation,
 // .header-contacts {
 //   display: flex;
