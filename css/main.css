@@ -1261,6 +1261,14 @@ input[type='checkbox']:checked + .checkbox__icon {
   margin-bottom: 25px;
 }
 
+@media (min-width: 768px) {
+  .filter {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
 .filter__item {
   margin-bottom: 15px;
 }
@@ -1299,9 +1307,27 @@ input[type='checkbox']:checked + .checkbox__icon {
   margin-top: -30px;
 }
 
+@media (min-width: 768px) {
+  .portfolio {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    margin: -15px;
+  }
+}
+
 .portfolio__card {
   margin-left: 30px;
   margin-top: 30px;
+}
+
+@media (min-width: 768px) {
+  .portfolio__card {
+    width: calc((100% - 4 * 15px) / 2);
+    margin: 15px;
+  }
 }
 
 .portfolio__photo {
@@ -1353,13 +1379,30 @@ input[type='checkbox']:checked + .checkbox__icon {
 }
 
 .portfolio__text-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
   padding: 20px 24px;
   border: 1px solid #eeeeee;
 }
 
 .portfolio__link {
   text-decoration: none;
-  display: block;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 100%;
   -webkit-transition: -webkit-box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: -webkit-box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
