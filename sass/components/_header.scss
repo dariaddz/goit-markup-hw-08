@@ -3,9 +3,28 @@
   align-items: center;
   justify-content: space-between;
 }
+// .nav-bigscreen {
+//   display: none;
+//   @media (min-width: 768px) {
+//     @include flexcenter;
+//   }
+// }
+
+.top-line {
+  display: none;
+  @media (min-width: 768px) {
+    @include flexcenter;
+  }
+}
+
+.contacts-bigscreen {
+  display: none;
+  @media (min-width: 768px) {
+    @include flexcenter;
+  }
+}
 
 .menu-container {
-  // display: none;
   position: fixed;
   z-index: 80;
   top: 0;
@@ -42,6 +61,12 @@
   }
 }
 
+.menu-toggle {
+  @media (min-width: 768px) {
+    display: none;
+  }
+}
+
 .contacts-socmedia {
   margin-top: auto;
 }
@@ -51,6 +76,9 @@
 
 .header-contacts {
   margin-bottom: 32px;
+  @media (min-width: 768px) {
+    margin-bottom: 0;
+  }
 }
 
 .navigation__link {
@@ -74,10 +102,44 @@
   &--current {
     color: $accent-color;
   }
+
+  @media (min-width: 768px) {
+    position: relative;
+    margin-bottom: 0;
+    padding-top: 32px;
+    padding-bottom: 32px;
+    bottom: -1px;
+    font-size: 14px;
+    line-height: 1.14;
+
+    &--current::after {
+      color: $accent-color;
+      content: '';
+      display: block;
+
+      position: absolute;
+      bottom: 0;
+      left: 0;
+
+      background-color: $accent-color;
+
+      width: 100%;
+      height: 4px;
+      border-radius: 2px;
+    }
+  }
 }
 
 .header-contacts__item {
   margin-bottom: 32px;
+  @media (min-width: 768px) {
+    margin-bottom: 0;
+  }
+}
+.header-contacts__item:not(:last-child) {
+  @media (min-width: 768px) {
+    margin-bottom: 10px;
+  }
 }
 
 .header-contacts__link {
@@ -92,22 +154,31 @@
     color: $accent-color;
     font-size: 34px;
   }
-  // &:hover .header-contacts__icon,
-  // &:focus .header-contacts__icon {
-  //   fill: $accent-color;
 
   &:hover,
   &:focus {
     color: $accent-color;
   }
+  @media (min-width: 768px) {
+    font-size: 14px;
+    color: $primary-color;
+
+    &:hover .header-contacts__icon,
+    &:focus .header-contacts__icon {
+      fill: $accent-color;
+    }
+  }
 }
 
 .header-contacts__icon {
   display: none;
-  //   margin-right: 10px;
-  //   fill: $primary-color;
+  @media (min-width: 768px) {
+    display: inline-block;
+    margin-right: 10px;
+    fill: $primary-color;
 
-  //   transition: fill $trans-duration $timing-func; for desctop
+    transition: fill $trans-duration $timing-func;
+  }
 }
 
 .menu__link {
@@ -130,65 +201,23 @@
   margin-left: 10px;
 }
 
-// .top-line {
-//   @include flexcenter;
-// }
 .navigation__item,
 .header-contacts__item,
 .menu__item {
   text-align: left;
 }
-// .navigation,
-// .header-contacts {
-//   display: flex;
-// }
+
+@media (min-width: 768px) {
+  .navigation {
+    display: flex;
+  }
+  .navigation__item:not(:last-child) {
+    margin-right: 50px;
+  }
+}
 
 // /* Ссылки */
 
-// .navigation__item:not(:last-child) {
-//   margin-right: 50px;
-// }
-
-// .navigation__link {
-//   display: block;
-//   position: relative;
-
-//   padding-top: 32px;
-//   padding-bottom: 32px;
-//   bottom: -1px;
-//   color: $title-color;
-//   text-decoration: none;
-
-//   font-weight: 500;
-//   line-height: 1.14;
-//   letter-spacing: 0.02em;
-
-//   transition: color $trans-duration $timing-func;
-
-//   &:hover,
-//   &:focus {
-//     color: $accent-color;
-//   }
-//   &--current {
-//     color: $accent-color;
-//   }
-
-//   &--current::after {
-//     color: $accent-color;
-//     content: '';
-//     display: block;
-
-//     position: absolute;
-//     bottom: 0;
-//     left: 0;
-
-//     background-color: $accent-color;
-
-//     width: 100%;
-//     height: 4px;
-//     border-radius: 2px;
-//   }
-// }
 // /* Контакты в хедере */
 
 // .header-contacts {
@@ -198,30 +227,8 @@
 //   margin-left: 50px;
 // }
 
-// .header-contacts__icon {
-//   margin-right: 10px;
-//   fill: $primary-color;
-
-//   transition: fill $trans-duration $timing-func;
-// }
-
+//
 // .header-contacts__link {
 //   @include flexcenter;
 
-//   color: $primary-color;
-
-//   font-weight: 500;
-//   line-height: 1.14;
-//   letter-spacing: 0.02em;
-//   transition: color $trans-duration $timing-func;
-
-//   &:hover .header-contacts__icon,
-//   &:focus .header-contacts__icon {
-//     fill: $accent-color;
-//   }
-
-//   &:hover,
-//   &:focus {
-//     color: $accent-color;
-//   }
 // }
