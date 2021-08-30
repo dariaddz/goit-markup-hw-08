@@ -1,6 +1,11 @@
 .features {
-  // display: flex;
   text-align: center;
+
+  @media (min-width: 768px) {
+    display: flex;
+    flex-wrap: wrap;
+    margin: -15px;
+  }
 }
 
 .features__title {
@@ -15,15 +20,20 @@
 .features__item {
   max-width: 450px;
   margin-bottom: 30px;
+
   &:last-child {
     margin-bottom: 0;
   }
-  // align-items: baseline;
-
-  // &:not(:last-child) {
-  //   margin-right: 30px;
-  // }
+  @media (min-width: 768px) {
+    width: calc((100% - 4 * 15px) / 2);
+    margin: 15px;
+  }
 }
+// align-items: baseline;
+
+// &:not(:last-child) {
+//   margin-right: 30px;
+// }
 
 .features__box {
   // @include flexcenter;

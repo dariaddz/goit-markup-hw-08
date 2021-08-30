@@ -2,14 +2,8 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  // height: 60px;
 }
 
-// .menu-buton,
-// .close-button {
-//   width: 24px;
-//   height: 24px;
-// }
 .menu-container {
   // display: none;
   position: fixed;
@@ -38,7 +32,14 @@
   top: 16px;
   right: 16px;
   background-color: $secondary-color;
+  fill: $title-color;
   border: none;
+  transition: fill $trans-duration $timing-func;
+
+  &:hover,
+  &:focus {
+    fill: $accent-color;
+  }
 }
 
 .contacts-socmedia {
