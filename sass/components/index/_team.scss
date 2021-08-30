@@ -21,12 +21,18 @@
     width: calc((100% - 4 * 15px) / 2);
     margin: 15px;
   }
+  @media (min-width: 1200px) {
+    width: calc((100% - 8 * 15px) / 4);
+    margin: 15px;
+  }
 }
 
 .team__wrapper {
   padding-top: 30px;
   padding-bottom: 24px;
-  // padding-bottom: 30px;for desktop
+  @media (min-width: 1200px) {
+    padding-bottom: 30px;
+  }
 }
 .team__name {
   color: $title-color;

@@ -3,11 +3,6 @@
   flex-wrap: wrap;
   margin: 15px -15px -15px;
 }
-//   margin-top: 30px;
-//   // margin-top: 50px; for desktop
-
-//   // justify-content: space-between;
-// }
 
 .clients__items {
   width: calc((100% - 4 * 15px) / 2);
@@ -16,6 +11,9 @@
   @media (min-width: 768px) {
     width: calc((100% - 6 * 15px) / 3);
   }
+  @media (min-width: 1200px) {
+    width: calc((100% - 12 * 15px) / 6);
+  }
 }
 .clients__link {
   width: 100%;
@@ -23,8 +21,7 @@
   padding-bottom: 16px;
 
   display: inline-block;
-  // // justify-content: center;
-  // // align-items: center;
+
   @include border($icon-color);
   border-radius: 4px;
 
@@ -38,10 +35,3 @@
     @include border($accent-color);
   }
 }
-//   // width: 170px;
-//   padding-top: 16px;
-//   padding-bottom: 16px;
-//   width: calc((100% - 4 * 15px) / 2);
-//   margin: 15px;
-//
-// }

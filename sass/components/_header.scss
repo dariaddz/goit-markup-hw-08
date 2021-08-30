@@ -2,6 +2,9 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  @media (min-width: 1200px) {
+    justify-content: flex-start;
+  }
 }
 // .nav-bigscreen {
 //   display: none;
@@ -21,6 +24,9 @@
   display: none;
   @media (min-width: 768px) {
     @include flexcenter;
+  }
+  @media (min-width: 1200px) {
+    margin-left: auto;
   }
 }
 
@@ -78,6 +84,10 @@
   margin-bottom: 32px;
   @media (min-width: 768px) {
     margin-bottom: 0;
+  }
+
+  @media (min-width: 1200px) {
+    display: flex;
   }
 }
 
@@ -139,6 +149,9 @@
 .header-contacts__item:not(:last-child) {
   @media (min-width: 768px) {
     margin-bottom: 10px;
+  }
+  @media (min-width: 1200px) {
+    margin-bottom: 0;
   }
 }
 
@@ -216,6 +229,17 @@
   }
 }
 
+@media (min-width: 1200px) {
+  .header-contacts__item + .header-contacts__item {
+    margin-left: 30px;
+  }
+  .navigation {
+    margin-right: auto;
+  }
+  .navigation__item:not(:last-child) {
+    margin-right: 30px;
+  }
+}
 // /* Ссылки */
 
 // /* Контакты в хедере */

@@ -48,18 +48,19 @@ a {
     justify-content: space-between;
   }
 
-  &--baseline {
-    // display: flex;
-    // align-items: baseline;
-  }
+  // &--baseline {
+  //   // display: flex;
+  //   // align-items: baseline;
+  // }
 }
 
 .section {
   padding-top: 60px;
   padding-bottom: 60px;
-
-  // padding-top: 94px;
-  // padding-bottom: 94px; for desktop
+  @media (min-width: 1200px) {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
 
   &--no-padding {
     padding-top: 0px;
@@ -67,10 +68,6 @@ a {
 
   &--light-background {
     background-color: $background-color-light;
-  }
-  &--display-none {
-    display: none;
-    // for desktop - display
   }
 }
 

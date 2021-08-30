@@ -28,17 +28,14 @@
     width: calc((100% - 4 * 15px) / 2);
     margin: 15px;
   }
-}
-// align-items: baseline;
 
-// &:not(:last-child) {
-//   margin-right: 30px;
-// }
+  @media (min-width: 1200px) {
+    width: calc((100% - 8 * 15px) / 4);
+    margin: 15px;
+  }
+}
 
 .features__box {
-  // @include flexcenter;
-  // justify-content: center;
-
   margin-bottom: 30px;
   padding: 25px 0;
   background-color: $background-color-light;
