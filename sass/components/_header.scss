@@ -3,6 +3,9 @@
   align-items: center;
   justify-content: space-between;
   padding: 16px 15px;
+  @media (min-width: 768px) {
+    padding: 0;
+  }
   @media (min-width: 1200px) {
     justify-content: flex-start;
   }
