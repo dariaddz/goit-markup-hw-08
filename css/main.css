@@ -406,6 +406,12 @@ h2 {
   text-align: center;
 }
 
+@media (min-width: 1200px) {
+  h2 {
+    font-size: 36px;
+  }
+}
+
 .visually-hidden {
   position: absolute;
   clip: rect(0 0 0 0);
@@ -827,6 +833,7 @@ h2 {
 .features__title {
   margin-bottom: 10px;
   color: #212121;
+  font-size: 14px;
   font-weight: 700;
   line-height: 1.14;
   text-transform: uppercase;
@@ -1070,7 +1077,11 @@ h2 {
   padding-bottom: 60px;
 }
 
-@media (min-width: 768px) {
+.footer__tablet {
+  display: none;
+}
+
+@media (min-width: 768px) and (max-width: 1199px) {
   .footer__tablet {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1080,11 +1091,10 @@ h2 {
   }
 }
 
-@media (min-width: 1200px) {
-  .footer__tablet {
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
+@media (min-width: 768px) and (max-width: 1199px) {
+  .footer-socmedia--mob-desctop,
+  .footer-contacts--mob-desctop {
+    display: none;
   }
 }
 
@@ -1303,7 +1313,7 @@ h2 {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(140, 35, 35, 0.2);
+  background-color: rgba(0, 0, 0, 0.2);
   -webkit-transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -1332,6 +1342,13 @@ h2 {
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+@media (min-width: 1200px) {
+  .modal {
+    width: 528px;
+    height: auto;
+  }
+}
+
 .backdrop.is-hidden .modal {
   -webkit-transform: translate(-50%, -50%) scale(0.5);
           transform: translate(-50%, -50%) scale(0.5);
@@ -1339,8 +1356,8 @@ h2 {
 
 .icon-close {
   position: absolute;
-  top: 8px;
-  right: 8px;
+  top: 7px;
+  right: 9px;
   width: 30px;
   height: 30px;
   border-radius: 50%;
@@ -1513,6 +1530,12 @@ textarea::placeholder {
   font-size: 11px;
 }
 
+@media (min-width: 1200px) {
+  .checkbox {
+    font-size: 14px;
+  }
+}
+
 input[type='checkbox'] {
   margin-right: 8px;
 }
@@ -1618,6 +1641,13 @@ input[type='checkbox']:checked + .checkbox__icon {
 @media (min-width: 768px) {
   .portfolio__card {
     width: calc((100% - 4 * 15px) / 2);
+    margin: 15px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .portfolio__card {
+    width: calc((100% - 6 * 15px) / 3);
     margin: 15px;
   }
 }
