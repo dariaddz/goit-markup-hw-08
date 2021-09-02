@@ -343,38 +343,20 @@ a {
 }
 
 .container {
-  margin-left: auto;
-  margin-right: auto;
+  min-width: 320px;
   padding-left: 15px;
   padding-right: 15px;
-  text-align: center;
 }
 
-.container--bottomline {
-  border-bottom: 1px solid #ececec;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  align-items: center;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+@media (min-width: 768px) {
+  .container {
+    min-width: 768px;
+  }
 }
 
 @media (min-width: 1200px) {
-  .container--flexstart {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: start;
-        -ms-flex-align: start;
-            align-items: flex-start;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
+  .container {
+    min-width: 1200px;
   }
 }
 
@@ -448,7 +430,7 @@ h2 {
   text-align: start;
 }
 
-.header {
+.header-container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -458,17 +440,18 @@ h2 {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  padding: 16px 15px;
+  height: 60px;
+  border-bottom: 1px solid #ececec;
 }
 
 @media (min-width: 768px) {
-  .header {
-    padding: 0;
+  .header-container {
+    height: 80px;
   }
 }
 
 @media (min-width: 1200px) {
-  .header {
+  .header-container {
     -webkit-box-pack: start;
         -ms-flex-pack: start;
             justify-content: flex-start;
@@ -752,12 +735,10 @@ h2 {
 }
 
 .hero {
-  max-width: 480px;
+  max-width: 1600px;
   height: auto;
-  margin-left: auto;
-  margin-right: auto;
-  padding-top: 200px;
-  padding-bottom: 200px;
+  padding-top: 118px;
+  padding-bottom: 118px;
   background-color: #2f303a;
   text-align: center;
   background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url("../images/hero/hero-mobile.jpg");
@@ -775,8 +756,6 @@ h2 {
 
 @media (min-width: 768px) {
   .hero {
-    min-width: 768px;
-    max-width: 1200px;
     background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url("../images/hero/hero-tablet.jpg");
     background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/hero/hero-tablet.jpg");
   }
@@ -791,7 +770,8 @@ h2 {
 
 @media (min-width: 1200px) {
   .hero {
-    min-width: 1200px;
+    padding-top: 200px;
+    padding-bottom: 200px;
     background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url("../images/hero/hero-desktop.jpg");
     background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/hero/hero-desktop.jpg");
   }
@@ -845,10 +825,6 @@ h2 {
   background-color: #188ce8;
 }
 
-.features {
-  text-align: center;
-}
-
 @media (min-width: 768px) {
   .features {
     display: -webkit-box;
@@ -869,8 +845,14 @@ h2 {
   text-transform: uppercase;
 }
 
+@media (max-width: 767px) {
+  .features__title {
+    text-align: center;
+  }
+}
+
 .features__item {
-  max-width: 450px;
+  width: 100%;
   margin-bottom: 30px;
 }
 
@@ -893,37 +875,38 @@ h2 {
 }
 
 .features__box {
+  text-align: center;
   margin-bottom: 30px;
   padding: 25px 0;
   background-color: #f5f4fa;
   border-radius: 4px;
 }
 
-.activities {
+.activities__section {
   display: none;
 }
 
 @media (min-width: 1200px) {
-  .activities {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    margin-top: 50px;
+  .activities__section {
+    display: block;
   }
+}
+
+.activities__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-top: 50px;
 }
 
 .activities__item {
   position: relative;
 }
 
-.activities__item:not(:last-child) {
-  margin-right: 30px;
-}
-
-.activities__header {
+.activities__name {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -957,7 +940,7 @@ h2 {
     display: flex;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
-    margin: -15px;
+    margin: 30px -15px -15px;
   }
 }
 
@@ -1053,8 +1036,6 @@ h2 {
 
 .socmedia--footer {
   margin-top: 20px;
-  margin-left: 0;
-  margin-right: 0;
 }
 
 .clients {
@@ -1084,6 +1065,7 @@ h2 {
 }
 
 .clients__link {
+  text-align: center;
   width: 100%;
   padding-top: 16px;
   padding-bottom: 16px;
@@ -1107,25 +1089,12 @@ h2 {
   padding-bottom: 60px;
 }
 
-.footer__tablet {
-  display: none;
+.footer-contacts {
+  margin-bottom: 60px;
 }
 
-@media (min-width: 768px) and (max-width: 1199px) {
-  .footer__tablet {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-pack: distribute;
-        justify-content: space-around;
-  }
-}
-
-@media (min-width: 768px) and (max-width: 1199px) {
-  .footer-socmedia--mob-desctop,
-  .footer-contacts--mob-desctop {
-    display: none;
-  }
+.footer__contacts-socmedia {
+  margin-bottom: 60px;
 }
 
 .footer__address {
@@ -1134,20 +1103,8 @@ h2 {
 }
 
 /* адрес и контакты */
-@media (min-width: 1200px) {
-  .footer-contacts {
-    margin-right: 70px;
-  }
-}
-
 .footer-contacts__address {
   color: #ffffff;
-}
-
-@media (min-width: 1200px) {
-  .footer-contacts__address {
-    text-align: start;
-  }
 }
 
 /* адреса и телефоны */
@@ -1164,33 +1121,13 @@ h2 {
   color: #2196f3;
 }
 
-@media (min-width: 1200px) {
-  .footer-contacts__item {
-    text-align: start;
-  }
-}
-
 /* ссылки на соцсети  Присоединяйтесь*/
-@media (min-width: 1200px) {
-  .footer-socmedia {
-    margin-right: 93px;
-  }
-}
-
 .footer-socmedia__header,
 .subscribe__header {
-  margin-top: 60px;
-  margin-bottom: 0;
   font-weight: 700;
   line-height: 1.14;
   text-transform: uppercase;
   color: #ffffff;
-}
-
-@media (min-width: 768px) {
-  .footer-socmedia__header {
-    margin-top: 0;
-  }
 }
 
 /* Подпишитесь на рассылку */
@@ -1198,34 +1135,17 @@ h2 {
   margin-bottom: 20px;
 }
 
-@media (min-width: 1200px) {
-  .subscribe > h3 {
-    margin-top: 0;
-  }
-}
-
-@media (min-width: 768px) {
-  .subscribe > form {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-  }
-}
-
-@media (min-width: 1200px) {
-  .subscribe > form {
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-  }
+.subscribe > form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .subscribe__email {
@@ -1279,17 +1199,12 @@ h2 {
   letter-spacing: 0.03em;
 }
 
-@media (min-width: 1200px) {
-  .subscribe__email {
-    width: 358px;
-    margin-right: 12px;
-  }
-}
-
 /* кнопка Подписаться */
 .subscribe__button {
   width: 200px;
   height: 50px;
+  margin-left: auto;
+  margin-right: auto;
   margin-top: 20px;
   padding: 0;
   padding-left: 28px;
@@ -1603,7 +1518,6 @@ input[type='checkbox']:checked + .checkbox__icon {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  margin-bottom: 25px;
 }
 
 @media (min-width: 768px) {
@@ -1611,6 +1525,7 @@ input[type='checkbox']:checked + .checkbox__icon {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
+    margin-bottom: 30px;
   }
 }
 
@@ -1618,8 +1533,14 @@ input[type='checkbox']:checked + .checkbox__icon {
   margin-bottom: 15px;
 }
 
-.filter__item + .filter__item {
-  margin-left: 8px;
+@media (min-width: 768px) {
+  .filter__item {
+    margin-bottom: 0;
+  }
+}
+
+.filter__item:not(:last-of-type) {
+  margin-right: 8px;
 }
 
 .filter__button {
@@ -1648,8 +1569,7 @@ input[type='checkbox']:checked + .checkbox__icon {
 }
 
 .portfolio {
-  margin-left: -30px;
-  margin-top: -30px;
+  margin-top: 25px;
 }
 
 @media (min-width: 768px) {
@@ -1664,8 +1584,8 @@ input[type='checkbox']:checked + .checkbox__icon {
 }
 
 .portfolio__card {
-  margin-left: 30px;
-  margin-top: 30px;
+  margin-bottom: 30px;
+  height: 100%;
 }
 
 @media (min-width: 768px) {
@@ -1690,15 +1610,11 @@ input[type='checkbox']:checked + .checkbox__icon {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
   overflow: hidden;
 }
 
 .portfolio__photo::after {
   content: '';
-  display: inline-block;
   position: absolute;
   top: 0;
   left: 0;
@@ -1722,7 +1638,7 @@ input[type='checkbox']:checked + .checkbox__icon {
   font-size: 18px;
   line-height: 1.56;
   color: #ffffff;
-  z-index: 1;
+  z-index: 40;
   margin-right: 24px;
   margin-left: 24px;
   opacity: 0;
@@ -1738,22 +1654,14 @@ input[type='checkbox']:checked + .checkbox__icon {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-flex: 1;
-      -ms-flex-positive: 1;
-          flex-grow: 1;
+  max-width: 450px;
+  height: 110px;
   padding: 20px 24px;
   border: 1px solid #eeeeee;
 }
 
 .portfolio__link {
   text-decoration: none;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
   height: 100%;
   -webkit-transition: -webkit-box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: -webkit-box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);

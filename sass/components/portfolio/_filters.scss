@@ -1,20 +1,25 @@
 .filter {
   display: flex;
   flex-wrap: wrap;
-  margin-bottom: 25px;
+  // margin-bottom: 40px;
 
   @media (min-width: 768px) {
     justify-content: center;
+    margin-bottom: 30px;
   }
 }
 
 .filter__item {
   margin-bottom: 15px;
+  @media (min-width: 768px) {
+    margin-bottom: 0;
+  }
 }
 
-.filter__item + .filter__item {
-  margin-left: 8px;
+.filter__item:not(:last-of-type) {
+  margin-right: 8px;
 }
+
 .filter__button {
   padding: 6px 22px;
   color: $title-color;

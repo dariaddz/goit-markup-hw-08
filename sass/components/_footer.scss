@@ -4,22 +4,26 @@
   padding-top: 60px;
   padding-bottom: 60px;
 }
-
-.footer__tablet {
-  display: none;
-
-  @media (min-width: 768px) and (max-width: 1199px) {
-    display: flex;
-    justify-content: space-around;
-  }
+.footer-contacts {
+  margin-bottom: 60px;
 }
+// .footer__tablet {
+//   display: none;
 
-.footer-socmedia--mob-desctop,
-.footer-contacts--mob-desctop {
-  @media (min-width: 768px) and (max-width: 1199px) {
-    display: none;
-  }
+//   @media (min-width: 768px) and (max-width: 1199px) {
+//     display: flex;
+//     justify-content: space-around;
+//   }
+// }
+.footer__contacts-socmedia {
+  margin-bottom: 60px;
 }
+// .footer-socmedia--mob-desctop,
+// .footer-contacts--mob-desctop {
+//   @media (min-width: 768px) and (max-width: 1199px) {
+//     display: none;
+//   }
+// }
 
 .footer__address {
   font-style: normal;
@@ -28,16 +32,16 @@
 
 /* адрес и контакты */
 
-.footer-contacts {
-  @media (min-width: 1200px) {
-    margin-right: 70px;
-  }
-}
+// .footer-contacts {
+//   @media (min-width: 1200px) {
+//     margin-right: 70px;
+//   }
+// }
 .footer-contacts__address {
   color: $secondary-color;
-  @media (min-width: 1200px) {
-    text-align: start;
-  }
+  //   @media (min-width: 1200px) {
+  //     text-align: start;
+  //   }
 }
 
 /* адреса и телефоны */
@@ -53,52 +57,58 @@
   &:focus {
     color: $accent-color;
   }
-  @media (min-width: 1200px) {
-    text-align: start;
-  }
+  // @media (min-width: 1200px) {
+  //   text-align: start;
+  // }
 }
 /* ссылки на соцсети  Присоединяйтесь*/
 
 .footer-socmedia {
-  @media (min-width: 1200px) {
-    margin-right: 93px;
-  }
+  // @media (min-width: 1200px) {
+  //   margin-right: 93px;
+  // }
 }
 .footer-socmedia__header,
 .subscribe__header {
-  margin-top: 60px;
-  margin-bottom: 0;
+  // margin-top: 60px;
+  // margin-bottom: 0;
   font-weight: 700;
   line-height: 1.14;
   text-transform: uppercase;
   color: $secondary-color;
 }
-.footer-socmedia__header {
-  @media (min-width: 768px) {
-    margin-top: 0;
-  }
-}
+// .footer-socmedia__header {
+//   @media (min-width: 768px) {
+//     margin-top: 0;
+//   }
+// }
 
 /* Подпишитесь на рассылку */
 
 .subscribe > h3 {
   margin-bottom: 20px;
-
-  @media (min-width: 1200px) {
-    margin-top: 0;
-  }
 }
-
+//   @media (min-width: 1200px) {
+//     margin-top: 0;
+//   }
+// }
+// .subscribe {
+//   display: block;
+// }
 .subscribe > form {
-  @media (min-width: 768px) {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-  }
-  @media (min-width: 1200px) {
-    flex-direction: row;
-  }
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
+//   @media (min-width: 768px) {
+//     display: flex;
+//     flex-direction: column;
+//     justify-content: center;
+//   }
+//   @media (min-width: 1200px) {
+//     flex-direction: row;
+//   }
+// }
 .subscribe__email {
   width: 100%;
   max-width: 450px;
@@ -120,16 +130,19 @@
     line-height: 1.25;
     letter-spacing: 0.03em;
   }
-  @media (min-width: 1200px) {
-    width: 358px;
-    margin-right: 12px;
-  }
 }
+//   @media (min-width: 1200px) {
+//     width: 358px;
+//     margin-right: 12px;
+//   }
+// }
 /* кнопка Подписаться */
 
 .subscribe__button {
   width: 200px;
   height: 50px;
+  margin-left: auto;
+  margin-right: auto;
   margin-top: 20px;
   padding: 0;
   padding-left: 28px;

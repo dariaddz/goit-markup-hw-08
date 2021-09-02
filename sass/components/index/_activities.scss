@@ -1,20 +1,25 @@
-.activities {
+.activities__section {
   display: none;
   @media (min-width: 1200px) {
-    display: flex;
-    justify-content: center;
-    margin-top: 50px;
+    display: block;
+    // justify-content: center;
   }
+}
+
+.activities__list {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 50px;
 }
 
 .activities__item {
   position: relative;
 }
-.activities__item:not(:last-child) {
-  margin-right: 30px;
-}
+// .activities__item:not(:last-child) {
+//   margin-right: 30px;
+// }
 
-.activities__header {
+.activities__name {
   @include flexcenter;
   justify-content: center;
   position: absolute;

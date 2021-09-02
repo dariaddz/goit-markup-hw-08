@@ -1,6 +1,5 @@
 .portfolio {
-  margin-left: -30px;
-  margin-top: -30px;
+  margin-top: 25px;
 
   @media (min-width: 768px) {
     display: flex;
@@ -9,8 +8,9 @@
   }
 }
 .portfolio__card {
-  margin-left: 30px;
-  margin-top: 30px;
+  margin-bottom: 30px;
+  height: 100%;
+  // margin-top: 30px;
 
   @media (min-width: 768px) {
     width: calc((100% - 4 * 15px) / 2);
@@ -24,13 +24,12 @@
 .portfolio__photo {
   position: relative;
   @include flexcenter;
-  justify-content: center;
 
   overflow: hidden;
 
   &::after {
     content: '';
-    display: inline-block;
+    // display: inline-block;
     position: absolute;
     top: 0;
     left: 0;
@@ -51,7 +50,7 @@
   font-size: 18px;
   line-height: 1.56;
   color: $secondary-color;
-  z-index: 1;
+  z-index: 40;
 
   margin-right: 24px;
   margin-left: 24px;
@@ -63,16 +62,23 @@
 .portfolio__text-box {
   display: flex;
   flex-direction: column;
-  flex-grow: 1;
+  max-width: 450px;
+  height: 110px;
+  // flex-grow: 1;
 
   padding: 20px 24px;
   @include border(#eeeeee);
 }
+// .portfolio-link .portfolio__text-box:nth-of-type(-n + 2) {
+//   @media (min-width: 768px) {
+//     height: 146px;
+//   }
+// }
 
 .portfolio__link {
   text-decoration: none;
-  display: flex;
-  flex-direction: column;
+  // display: flex;
+  // flex-direction: column;
   height: 100%;
 
   transition: box-shadow $trans-duration $timing-func;

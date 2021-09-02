@@ -33,30 +33,19 @@ a {
 }
 
 .container {
-  margin-left: auto;
-  margin-right: auto;
-
+  // margin-left: auto;
+  // margin-right: auto;
+  min-width: 320px;
   padding-left: 15px;
   padding-right: 15px;
-  text-align: center;
-
-  &--bottomline {
-    border-bottom: 1px solid #ececec;
-    align-items: center;
-    @include flexcenter;
-
-    justify-content: space-between;
+  @media (min-width: 768px) {
+    min-width: 768px;
   }
-
-  &--flexstart {
-    @media (min-width: 1200px) {
-      display: flex;
-      align-items: flex-start;
-      justify-content: space-between;
-    }
+  @media (min-width: 1200px) {
+    min-width: 1200px;
   }
 }
-
+// &--bottomline { // align-items: center; // @include flexcenter; // justify-content: space-between; // } // &--flexstart { // @media (min-width: 1200px) { // display: flex; // align-items: flex-start; // justify-content: space-between; // } // };
 .section {
   padding-top: 60px;
   padding-bottom: 60px;
