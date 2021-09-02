@@ -1089,12 +1089,57 @@ h2 {
   padding-bottom: 60px;
 }
 
+@media (min-width: 1200px) {
+  .footer__container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+}
+
 .footer-contacts {
   margin-bottom: 60px;
 }
 
+@media (min-width: 768px) {
+  .footer-contacts {
+    margin-bottom: 0;
+  }
+}
+
+@media (min-width: 1200px) {
+  .footer-contacts {
+    margin-right: 70px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .contacts-list {
+    text-align: start;
+  }
+}
+
 .footer__contacts-socmedia {
   margin-bottom: 60px;
+}
+
+@media (min-width: 768px) {
+  .footer__contacts-socmedia {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+}
+
+@media (min-width: 1200px) {
+  .footer__contacts-socmedia {
+    margin-bottom: 0;
+  }
 }
 
 .footer__address {
@@ -1148,6 +1193,15 @@ h2 {
           justify-content: center;
 }
 
+@media (min-width: 1200px) {
+  .subscribe > form {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+}
+
 .subscribe__email {
   width: 100%;
   max-width: 450px;
@@ -1199,6 +1253,13 @@ h2 {
   letter-spacing: 0.03em;
 }
 
+@media (min-width: 1200px) {
+  .subscribe__email {
+    width: 358px;
+    margin-right: 12px;
+  }
+}
+
 /* кнопка Подписаться */
 .subscribe__button {
   width: 200px;
@@ -1232,14 +1293,6 @@ h2 {
 
 .subscribe__button:hover, .subscribe__button:focus {
   background-color: #188ce8;
-}
-
-@media (min-width: 768px) {
-  .subscribe__button {
-    margin-top: 20px;
-    margin-left: auto;
-    margin-right: auto;
-  }
 }
 
 @media (min-width: 1200px) {
