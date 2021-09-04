@@ -16,13 +16,14 @@
   }
 }
 .clients__link {
-  text-align: center;
+  // text-align: center;
   width: 100%;
   padding-top: 16px;
   padding-bottom: 16px;
 
-  display: inline-block;
-
+  display: flex;
+  justify-content: center;
+  align-items: center;
   @include border($icon-color);
   border-radius: 4px;
 

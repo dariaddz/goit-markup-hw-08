@@ -32,6 +32,10 @@
 
   transition: transform $trans-duration $timing-func;
 
+  @media (min-width: 786px) {
+    width: 450px;
+    height: auto;
+  }
   @media (min-width: 1200px) {
     width: 528px;
     height: auto;

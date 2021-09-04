@@ -1,10 +1,14 @@
+header {
+  border-bottom: 1px solid #ececec;
+}
+
 .header-container {
   display: flex;
   align-items: center;
   justify-content: space-between;
 
   height: 60px;
-  border-bottom: 1px solid #ececec;
+
   @media (min-width: 768px) {
     height: 80px;
   }
@@ -35,6 +39,7 @@
   z-index: 80;
   top: 0;
   left: 0;
+  overflow-y: scroll;
 
   display: flex;
   flex-direction: column;
